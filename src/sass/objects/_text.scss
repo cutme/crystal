@@ -1,0 +1,96 @@
+.o-text {
+
+    h4 {
+        margin-bottom: 1.5em;
+        text-transform: uppercase;
+        font: {
+            size: rem(18);
+            weight: $bold;
+        }
+    }
+
+    p {
+        margin-bottom: 1.5em;
+    }
+    
+    table {
+        border: {
+            left: 1px solid $c-blue3;
+            right: 1px solid $c-blue3;
+        }
+
+        td, th {
+            padding: 15px;
+            text-align: center;
+            border-bottom: 1px solid $c-blue3;
+        }
+    
+        thead {
+            th {
+                background-color: $c-blue3;
+                text-transform: uppercase;
+                font-weight: $bold;
+                color: white;
+            }
+        }
+    }
+    
+    ul {
+        float: left;
+
+        li {
+            @extend %rel;
+            padding-left: 40px;
+            
+            &:before {
+                @extend %abs;
+                @extend %abs-after;
+                left: 0; top: 10px;
+                width: 14px; height: 9px;
+                background: {
+                    image: url(../img/logo-crystal--sign.svg);
+                    repeat: no-repeat;
+                }
+            }
+        }
+    }
+
+    &--nomargin {
+        p {
+            margin-bottom: 0;
+        }
+    }
+
+    .align-left {
+        float: left;
+        margin-right: 30px;
+        
+        /*
+&:not(:last-of-type) {
+            margin-bottom: 80px;
+        }
+*/
+    }
+
+    .align-right {
+        float: right;
+        margin-left: 30px;
+        
+        /*
+&:not(:last-of-type) {
+            margin-bottom: 80px;
+        }
+*/
+    }
+    
+    section {
+        @include clear;
+
+        &:not(:last-of-type) {
+            .align-left,
+            .align-right {
+                margin-bottom: 80px;
+            }
+        }
+    }
+}

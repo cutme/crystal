@@ -1,0 +1,51 @@
+.glide {
+
+    &__bullet {
+        @extend %anim;
+        cursor: pointer;
+        opacity: .5;
+        
+        &--active {
+            opacity: 1;
+        }
+    }
+    
+    &__slide {
+        
+        &--active {
+            
+            .firstline,
+            .secondline,
+            .cta {
+                transition: all 350ms ease-out;
+            }
+                           
+            .secondline {
+                //transition: all 250ms ease-out;
+                transition-delay: 150ms;
+            }
+            
+            .cta {
+                //transition: all 250ms ease-out;
+                transition-delay: 250ms;
+            }
+        
+            .firstline,
+            .secondline, .cta {
+                opacity: 1 !important;
+                transform: translate3d(0, 0, 0) !important;
+            }
+    }
+    }
+    
+    &__track,
+    &__slides {
+        height: 100%;
+    }
+    
+    &__slides {
+        backface-visibility: hidden;
+        -webkit-perspective: 2000;
+        -webkit-backface-visibility: hidden;
+    }
+}

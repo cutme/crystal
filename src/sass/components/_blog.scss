@@ -1,0 +1,42 @@
+.c-blog {
+
+    img {
+        margin-bottom: 40px;
+    }
+
+    figcaption {
+        padding: 0 40px;
+    }
+    
+    .o-lead {
+        &--third {
+            margin-bottom: 1em;
+            text-transform: uppercase;
+            font-weight: $bold;
+        }
+        
+        &--fifth {
+            margin-bottom: 40px;
+            color: $c-gray2;
+        }
+    }
+    
+    .o-text {
+        margin-bottom: 40px;
+        padding: 0 20px;
+        line-height: 1.6em;
+        
+        p {
+            margin-bottom: 1.4em;
+        }
+    }
+    
+    .photo {
+        @extend %anim;
+        display: block;
+        
+        &:hover {
+            opacity: .8;
+        }
+    }
+}

@@ -1,0 +1,27 @@
+.o-header {
+    margin-bottom: 55px;
+
+    p {
+        color: $c-gray1;
+    }
+    
+    &--main {
+        margin-bottom: 40px;
+        padding-top: 60px;
+        text-align: center;
+        letter-spacing: 1px;
+
+        p {
+            color: black;
+        }
+        
+        .o-lead {
+            &--first {
+                margin-bottom: 1em;
+                text-transform: uppercase;
+                font-weight: $medium;
+                color: $c-blue3;
+            }            
+        }
+    }
+}

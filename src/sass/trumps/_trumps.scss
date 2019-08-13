@@ -1,0 +1,53 @@
+html:not(.ie) {
+    .anim {
+        transition: all 600ms ease-out;
+        opacity: 0;
+        
+        &--left {
+            transform: translate3d(50px, 0, 0);
+        }
+        
+        &--up {
+            transform: translate3d(0, 50px, 0);
+        }
+        
+        &--bottom {
+            transform: translate3d(0, -50px, 0);
+        }
+        
+        &--visible {
+            transform: translate3d(0, 0, 0);
+            opacity: 1;
+        }
+    }
+}
+
+
+.bg-gray {
+    background-color: $c-gray3;
+}
+
+.is-hidden {
+    display: none;
+}
+
+.is-visible {
+    display: block;
+}
+
+.text-center {
+    text-align: center;
+    
+    button {
+        margin: 0 auto;
+    }
+}
+
+.u-cover {
+    transition: all 500ms ease-out;
+    opacity: 1;
+    
+    .is-loaded & {
+        opacity: 0;
+    }
+}

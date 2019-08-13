@@ -1,0 +1,37 @@
+.c-numbers {
+    background-color: $c-primary;
+    padding: 10px 0 20px 0;
+    text-align: center;
+    color: white;
+
+    &__items {
+        @extend %flex;
+
+        li {
+            width: 25%;
+        }
+        
+        [class^="icon-"] {
+            display: inline-block;
+            margin-bottom: 20px;
+            font-size: rem(34);
+        }
+        
+        .info {
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            font: {
+                size: rem(12);
+                weight: $medium;
+            }
+        }
+        
+        .num {
+            margin-bottom: .4em;
+            font: {
+                size: rem(24);
+                weight: $bold;
+            }
+        }
+    }
+}

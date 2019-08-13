@@ -1,0 +1,52 @@
+<% include ./src/includes/head %>
+
+<body style="overflow: hidden">
+                                    
+    <div class="o-container">
+
+        <% include ./src/includes/top %>
+
+
+        <div class="o-header o-header--main">
+            <h1 class="o-lead--first">Blog</h1>
+        </div>
+
+
+        <div class="c-blogindex anim anim--up">
+            <div class="o-section">
+                <div class="o-wrap">
+                
+                    <div class="c-blogindex__intro">
+                        <div class="o-text text-center">
+<p>
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec id est rutrum ligula rutrum dapibus in mollis arcu. Quisque sollicitudin ut diam id consectetur. Sed ut nisl metus. Sed nec tellus in urna condimentum porta in vel mauris. 
+</p>
+                        </div>
+                    </div>
+                    
+                    <div class="c-blog__main">
+                        <div class="c-blog">
+                            <div class="o-cols o-cols--2p">
+                        
+                                <% include ./src/includes/blog-posts %>
+                                <% include ./src/includes/blog-posts %>
+                                <% include ./src/includes/blog-posts %>
+    
+                            </div>
+                        </div>
+                        
+                        <% include ./src/includes/pagination %>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        
+        <% include ./src/includes/contact %>
+        <% include ./src/includes/footer %>
+        <% include ./src/includes/copyrights %>
+        
+    </div>
+
+</body>
+</html>

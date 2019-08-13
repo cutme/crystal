@@ -1,0 +1,118 @@
+.c-slider {
+    @extend %rel; 
+    height: 568px;
+    
+    .glide {
+        &__arrow {
+            @extend %anim;
+            @extend %flex;
+            @extend %flex-xy;
+            width: 24px;
+            height: 30px;
+            border: 1px solid $c-blue3;
+            font-size: rem(14);
+            color: $c-blue3;
+            
+            &:hover {
+                .desktop & {
+                    background-color: $c-blue3;
+                    color: white;
+                }
+            }
+            
+            &--left {
+                margin-left: -64px;
+            }
+            
+            &--right {
+                margin-right: -64px;
+            }
+        }
+    
+        &__arrows {
+            @extend %abs;
+            @extend %abs-y;
+            @extend %flex;
+            @extend %flex-spacebetween;
+        }
+        
+        &__bullet {
+            width: 13px;
+            height: 13px;
+            background-color: transparent;
+            padding: 0;
+            margin-right: 5px;
+            border-radius: 50%;
+            border: 1px solid $c-blue2;
+    
+            &--active {
+                background-color: $c-blue2;
+            }
+        }
+        
+        &__arrows,
+        &__bullets {
+            @extend %abs;
+            left: calc((100% - 1170px)/2);
+            width: $base + px;
+        }
+        
+        &__bullets {
+            bottom: 25px;
+        }
+    }
+
+    &__item {
+        @extend %rel;
+        height: 100%;
+        background: {
+            repeat: no-repeat;
+            size: cover;
+            position: center;
+        }
+        
+        @media ( min-width: 1601px ) {
+            background-size: cover;
+        }
+    }
+    
+    &__text {
+        @extend %abs;
+        @extend %abs-y;
+        padding-bottom: 80px;
+        
+        @media ( max-width: $tablet + px ) {
+            left: 0;
+            width: 100%;
+            padding: 0 25px;
+            text-align: center;
+        }
+        
+       .firstline,
+       .secondline {
+            opacity: 0;
+            transform: translate3d(-50px, 0, 0);
+       }
+    
+    
+       .firstline {
+            margin-bottom: 20px;
+            font: {
+                size: rem(38);
+                weight: $medium;
+            }
+            color: $c-black4;
+        }
+
+        .secondline {
+            font-size: rem(18);
+        }
+        
+        .cta {
+            opacity: 0;
+            transform: translate3d(-50px, 0, 0);
+
+            padding-top: 40px;
+        }
+    }    
+}

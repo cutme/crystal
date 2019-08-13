@@ -1,0 +1,26 @@
+.c-video {
+    &__item {
+        @extend %rel;
+        display: block;
+        
+        .play {
+            @extend %abs;
+            @extend %abs-xy;
+            width: 85px; height: 85px;
+            background-color: $c-primary;
+            border-radius: 50%;
+            
+            &:after {
+                @extend %abs;
+                @extend %abs-xy;
+                @extend %abs-after;
+                display: inline-block;
+                width: 0;
+                height: 0;
+                border-style: solid;
+                border-width: 8.5px 0 8.5px 11px;
+                border-color: transparent transparent transparent white;
+            }
+        }
+    }
+}

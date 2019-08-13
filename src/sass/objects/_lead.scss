@@ -1,0 +1,51 @@
+.o-lead {
+
+    &--first,
+    &--second,
+    &--third,
+    &--fourth,
+    &--fifth {
+        line-height: 1.2em;
+    }
+    
+    &--first {
+        font-size: rem(43.8);
+    }
+
+    &--second {
+        font-size: rem(30);
+    }
+
+    &--third {
+        font-size: rem(20);
+    }
+    
+    &--fourth {
+        font-size: rem(18);
+    }
+    
+    &--fifth {
+        font-size: rem(14);
+    }
+    
+    
+    // Attrs
+    
+    &--center {
+        &:after {
+            @extend %abs-x;
+        }
+    }
+    
+    &--dash {
+        @extend %rel;
+
+        &:after {
+            @extend %abs;
+            @extend %abs-after;
+            bottom: -8px;
+            width: 32px; height: 1px;
+            background-color: $c-blue2;
+        }
+    }
+}

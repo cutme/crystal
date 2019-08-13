@@ -1,0 +1,96 @@
+.c-footer {
+    background-color: $c-blue1;
+    
+    .o-cols {
+        &__item {
+            @extend %flex;
+            width: calc(100% / 3);
+            
+            &--contact {
+                .contact {
+                    margin: 0 0 0 auto;
+                }
+            }
+            
+            &--logo {
+                img {
+                    margin: 0 auto;
+                }
+            }
+            
+            &--nav {
+            
+                .nav {
+                    flex: 1;
+                    
+                    ul {
+                        @extend %flex;
+                        @extend %flex-wrap;
+                        
+                        li {
+                            width: 50%;
+                        }
+                        
+                        a {
+                            @extend %ulink;
+                            
+                            &:before, &:after {
+                                background-color: $c-gray4;
+                            }
+                        }
+                    }
+                }
+            
+                .social {
+                    width: 70px;
+                    text-align: center;
+                    
+                    a {
+                        color: white;
+                    }
+                }
+            }
+
+        }
+    }
+    
+    .o-lead {
+        &--fifth {
+            color: white;
+        }
+        
+        &--dash {
+            &:after {
+                background-color: $c-blue3;
+            }
+        }
+    }
+    
+    .o-wrap {
+        @extend %rel;
+    }
+
+    dl {
+        dd {
+            font-size: rem(15);
+            color: $c-gray4;
+        }
+        
+        dt {
+            margin-bottom: 1.5em;
+            padding-left: 30px;            
+        }
+    }
+
+    &__gotop {
+        @extend %flex;
+        @extend %flex-xy;
+        @extend %abs;
+        right: -30px; top: -30px;
+        width: 30px; height: 24px;
+        border: 1px solid white;
+        font-size: rem(14);
+        cursor: pointer;
+        color: white;
+    }
+}

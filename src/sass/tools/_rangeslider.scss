@@ -1,0 +1,68 @@
+.rangeslider {
+    position: relative;
+    display: block;
+    cursor: pointer;
+    height: 35px;
+    width: 100%;
+    
+    &__fill,
+    &__fill__bg {
+        @extend %abs;
+        @extend %abs-y;
+        z-index: 2;
+        display: block;
+        height: 6px;
+        will-change: width;
+    }
+    
+    &__fill {
+        background-color: $c-primary;
+    }
+    
+    &__fill__bg {
+        background-color: $c-primary;
+        width: 100%;
+    }
+        
+    &__handle {
+        @extend %abs;
+        top: 50%;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        background-color: $c-black2;
+        will-change: width;
+        will-change: width,height,top;
+        cursor: pointer;
+        transition: width .1s ease-in-out,height .1s ease-in-out,top .1s ease-in-out;
+            
+        &:active {
+            background: lighten($c-black2, 5%);
+        }
+        
+        &:before {
+            @extend %abs;
+            @extend %abs-after;
+            @extend %abs-x;
+            @extend %flex;
+            @extend %flex-y;
+            top: -40px;
+            height: 30px;
+            background-color: $c-primary;
+            border-radius: 4px;
+            padding: 0 10px;
+            color: $c-black1;
+            white-space: nowrap;
+            content: attr(data-value) !important;
+            
+            .ie & {
+                display: inline-block;
+                line-height: 30px;
+            }
+        }
+    }
+    
+    &--disabled {
+        opacity: .4;
+    }
+}

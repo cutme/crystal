@@ -1,0 +1,71 @@
+<% include ./src/includes/head %>
+
+<body style="overflow: hidden">
+                                    
+    <div class="o-container">
+
+        <% include ./src/includes/top %>
+
+
+        <div class="o-header o-header--main">
+            <h1 class="o-lead--first">Kontakt</h1>
+        </div>
+
+
+        <div class="c-contact">
+            <div class="o-section">    
+                <div class="o-wrap">
+                    <div class="o-cols">
+                        
+                        <div class="o-cols__item anim anim--up">
+                            <ul class="c-contact__details">
+                                <li>
+                                    <i class="icon-phone"></i>
+                                    <span>+48 507 460 892</span>
+                                </li>
+                                
+                                <li>
+                                    <i class="icon-phone"></i>
+                                    <span>+48 507 460 896</span>
+                                </li>
+                                
+                                <li>
+                                    <i class="icon-mail"></i>
+                                    <span>
+                                        <a href="mailto:info@crystalaesthetic.pl">info@crystalaesthetic.pl</a>
+                                    </span>
+                                </li>
+                            </ul>
+                            
+                            <div class="c-contact__address">
+                                <div class="logo">
+                                    <img src=<%= require("./img/logo-crystal--sign.svg") %> alt="" width="112" height="68">
+                                </div>
+
+                                <address>
+                                    <p><strong>Crystal Aesthetic</strong></p>
+                                    <p>ul. Dworcowa 8,</p>
+                                    <p>05-816 Michałowice</p>
+                                    <p>Polska</p>
+                                </address>
+                            </div>
+                        </div>
+
+
+                        <div class="o-cols__item anim anim--bottom">
+                            <div class="c-map is-loading js-map" data-lat="52.1746239" data-lng="20.877382"></div>
+                        </div>                        
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        
+        <% include ./src/includes/contact %>
+        <% include ./src/includes/footer %>
+        <% include ./src/includes/copyrights %>
+        
+    </div>
+
+</body>
+</html>

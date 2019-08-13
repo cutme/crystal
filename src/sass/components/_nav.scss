@@ -1,0 +1,56 @@
+.c-nav {
+    @extend %flex;
+
+    ul {
+        @extend %flex;
+    }
+
+    
+    &__menu {
+        margin-right: 15px;
+
+        li {
+            padding: 0 15px;
+            
+            a {
+                @extend %ulink;
+                text-transform: uppercase;
+                font-size: rem(12);
+                color: $c-black2;
+                
+                &:before, &:after {
+                    background-color: $c-black2;
+                }
+            }
+            
+            &.current-menu-item {
+                a {
+                    &:before {           
+                        height: 2px;     
+                        transform: scale3d(1, 1, 1);
+                        transform-origin: left center;
+                    }
+                    font-weight: $extrabold;
+                }
+            }
+        }
+    }
+    
+    &__social {
+        li {
+            padding: 0 5px;
+            
+            a {
+                @extend %anim;
+                display: inline-block;
+                color: $c-blue2;
+                
+                &:hover {
+                    .desktop & {
+                        transform: translate3d(0, -4px, 0);
+                    }
+                }
+            }
+        }
+    }
+}

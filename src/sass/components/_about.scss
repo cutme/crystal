@@ -1,0 +1,37 @@
+.c-about {
+    .o-section {
+        padding-top: 0;
+    }
+    
+    &__intro {
+        margin-bottom: 100px;
+
+        .o-text {
+            p {
+                margin: 0;
+            }
+        }
+    }
+    
+    &__main {
+    
+        .o-text {
+            .align-left {
+                margin: 0 50px 0 -98px;
+            }
+            
+            .align-right {
+                margin: 0 -98px 0 50px;
+            }
+            
+            section {
+                &:not(:last-of-type) {
+                    .align-left,
+                    .align-right {
+                        margin-bottom: 80px;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,153 @@
+<% include ./src/includes/head %>
+
+<body class="home" style="overflow: hidden">
+                                    
+    <div class="o-container">
+
+        <% include ./src/includes/top %>
+
+
+        <div class="glide c-slider" id="homeCarousel">
+            <div class="glide__track" data-glide-el="track">
+
+                <ul class="glide__slides">
+                    <li class="glide__slide c-slider__item" style="background-image: url(<%= require('./img/slider/01.jpg') %>)">
+                        <div class="o-wrap">
+                            <div class="c-slider__text">
+                                <p class="firstline">Szukamy modelki i modeli</p>
+                                <p class="secondline">Poszukujemy modelek i modeli na zabiegi<br>
+                                podczas szkoleń dla lekarzy medycyny estetycznej</p>
+                                
+                                <div class="cta">
+                                    <a href="kontakt.html" class="o-btn o-btn--primary">Skontaktuj się</a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    
+                    <li class="glide__slide c-slider__item" style="background-image: url(<%= require('./img/slider/02.jpg') %>)">
+                        <div class="o-wrap">
+                            <div class="c-slider__text">
+                                <p class="firstline">Szkolenia dla lekarzy</p>
+                                <p class="secondline">Organizatora profesjonalnych szkoleń z zakresu<br> 
+                                implantacji nici <strong>PDO i PLLA</strong> przeznaczonych<br> 
+                                dla lekarzy medycyny estetycznej.</p>
+                                
+                                <div class="cta">
+                                    <a href="kontakt.html" class="o-btn o-btn--primary">Skontaktuj się</a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    
+                    <li class="glide__slide c-slider__item" style="background-image: url(<%= require('./img/slider/03.jpg') %>)">
+                        <div class="o-wrap">
+                            <div class="c-slider__text">
+                                <p class="firstline">Bezinwzyjny lifting</p>
+                                <p class="secondline">Zapraszamy na zabiegi nićmi najnowszej generacji.<br>
+Nam rhoncus tellus sed magna ullamcorper hendrerit. <br>
+Proin risus mauris, vulputate non erat at, <br>
+ultrices blandit erat. </p>
+                                
+                                <div class="cta">
+                                    <a href="kontakt.html" class="o-btn o-btn--primary">Skontaktuj się</a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            
+            <div class="glide__bullets" data-glide-el="controls[nav]">
+                <button class="glide__bullet" data-glide-dir="=0"></button>
+                <button class="glide__bullet" data-glide-dir="=1"></button>
+                <button class="glide__bullet" data-glide-dir="=2"></button>
+            </div>
+            
+            <div class="glide__arrows" data-glide-el="controls">
+                <button class="glide__arrow icon-chevron-left glide__arrow--left" data-glide-dir="<"></button>
+                <button class="glide__arrow icon-chevron-right glide__arrow--right" data-glide-dir=">"></button>
+              </div>
+        </div>
+        
+        
+        <div class="o-section anim anim--up">
+            <div class="o-wrap">
+                <article class="o-text o-text--nomargin text-center">
+                    <h2 class="o-crystalead">O Crystal Aeshetic</h2>
+
+<p>Jesteśmy dystrybutorem wysokiej jakości koreańskich nici przeznaczonych do zabiegów medycyny estetycznej.</p>
+<p>Oferowane przez nas nici PDO i PLLA produkowane są w jednej z najlepszych na rynku fabryk.</p>
+<p>Posiadają certyfikat CE oraz certyfikat bezpieczeństwa wydany przez KFDA.</p>
+
+<p>&nbsp;</p>
+
+<p>Organizujemy szkolenia prowadzone przez wykwalifikowanych trenerów-lekarzy medycyny estetycznych.</p>
+<p>Nasze warsztaty są przeznaczone zarówno dla osób początkujących jak i już praktykujących wykonywanie zabiegów nićmi.</p>
+
+<p>&nbsp;</p>
+
+<p>Nasze produkty i szkolenia przeznaczone są wyłącznie dla dyplomowanych specjalistów.</p>
+<p>Przed złożeniem zamówienia weryfikujemy numer PWZL klienta.</p>
+
+
+                </article>
+            </div>
+        </div>
+        
+
+        <% include ./src/includes/team %>
+        <% include ./src/includes/numbers %>
+        <% include ./src/includes/video %>
+        
+        
+        <div class="c-products anim anim--up">
+            <div class="o-section">
+                <div class="o-wrap">
+                    
+                    <header class="o-header text-center">
+                        <h2 class="o-crystalead">Produkty</h2>
+                        
+                        <p>Profesjonalne nici do zabiegów medycyny estetycznej</p>
+                    </header>
+                    
+                    <div class="o-cols o-cols--3">
+                        <% include ./src/includes/products %>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <% include ./src/includes/references %>
+
+        
+        <div class="c-blog text-center">
+            <div class="o-section">
+                <div class="o-wrap">
+                    
+                    <header class="o-header text-center">
+                        <h2 class="o-crystalead">Blog</h2>
+                        
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        <p>Proin lacus sem, fringilla et hendrerit eget, pulvinar pulvinar ligula. </p>
+                    </header>
+                    
+                    <div class="o-cols o-cols--2p">
+                    
+                        <% include ./src/includes/blog-posts %>
+                    
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        
+        <% include ./src/includes/contact %>
+        <% include ./src/includes/footer %>
+        <% include ./src/includes/copyrights %>
+        
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,51 @@
+.o-btn {
+    @extend %anim;
+    @extend %flex-xy;
+    @extend %rel;
+    display: inline-flex;
+    align-self: baseline;
+    width: auto;
+    height: 54px;
+    white-space: nowrap;
+    padding: 0 20px;
+    letter-spacing: 1px;
+    text: {
+        align: center;
+        transform: uppercase;
+    }
+    font: {
+        family: $text;
+        size: rem(12);
+        weight: $medium;
+    }
+    transform: translate3d(0, 0, 0);
+    cursor: pointer;
+    
+    @media ( max-width: $smartphone_portrait + px ) {
+        width: 100%;
+    }
+    
+    span {
+        &:after {
+            font-size: rem(10);
+            content: ' >';
+        }
+    }
+    
+    &--primary {
+        background-color: $c-primary;
+        color: white;
+        
+        &:hover {
+            .desktop & {
+                background-color: $c-blue4;
+            }
+        }
+    }
+}
+
+button.o-btn {
+    span {
+        width: 100%;
+    }
+}

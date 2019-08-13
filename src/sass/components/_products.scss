@@ -1,0 +1,63 @@
+.c-products {
+
+    .o-cols {
+        &__item {
+            &:nth-child(3n + 1) {                
+
+                figcaption {
+                    padding-right: 15px;
+                }
+            }
+            
+            &:nth-child(3n + 3) {                
+
+                figcaption {
+                    padding-left: 15px;
+                }
+            }
+
+            &:nth-child(3n + 2) {                
+                figcaption {
+                    padding: 0 15px;
+                }
+            }
+            
+
+            .home {
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    .o-header {
+        margin-bottom: 20px;
+    }
+
+    &__item {
+        text-align: center;
+        
+/*
+        figcaption {
+            padding: 0 10px;
+        }
+*/
+        
+        img {
+            margin-bottom: 30px;
+        }
+    
+        .o-lead {
+            &--third {
+                margin-bottom: .5em;
+                text-transform: uppercase;
+                font-weight: $bold;
+                color: $c-blue1;
+            }
+        }
+        
+        .title {
+            margin-bottom: 40px;
+        }
+    }
+}
+

@@ -1,0 +1,71 @@
+<% include ./src/includes/head %>
+
+<body style="overflow: hidden">
+                                    
+    <div class="o-container">
+
+        <% include ./src/includes/top %>
+
+
+        <div class="o-header o-header--main">
+            <h1 class="o-lead--first">Nici do zabiegów</h1>
+            <p>Profesjonalne nici do zabiegów medycyny estetycznej</p>
+        </div>
+
+
+        <div class="c-products anim anim--up">
+            <div class="o-section">
+                <div class="o-wrap">
+
+                    <div class="o-cols o-cols--3">
+                        <% include ./src/includes/products %>
+                        <% include ./src/includes/products %>
+                        <% include ./src/includes/products %>
+                        
+                        <div class="o-cols__item">
+                            <a href="product.html" class="c-products__item">
+                                <figure>
+                                    <img src=<%= require("./img/photos/products/01.jpg") %> alt="" width="390" height="370">
+                                    
+                                    <div class="title">
+                                        <h4 class="o-lead--third">Nić Twin Screw PDO</h4>
+                                        <p>Nić podwójnie skręcona.</p>
+                                    </div>
+                                    
+                                    <figcaption>
+                                        <p>Rewitalizacja oraz spłycanie zmarszczek, zabiegi wymagające podniesienia/rozprostowania tkanek; zabiegi relaksacji mięśni- alternatywa dla toksyny botulinowej, redukcja zmarszczek mimicznych.</p>
+                                    </figcaption>
+                                </figure>
+                            </a>
+                        </div>
+                        
+                        <div class="o-cols__item">
+                            <a href="product.html" class="c-products__item">
+                                <figure>
+                                    <img src=<%= require("./img/photos/products/02.jpg") %> alt="" width="390" height="370">
+                                    
+                                    <div class="title">
+                                        <h4 class="o-lead--third">Nić Screw PDO</h4>
+                                        <p>Nić pojedyńcza skręcona.</p>
+                                    </div>
+                                    
+                                    <figcaption>
+                                        <p>Efektem zabiegów z użyciem tych nici jest znaczne zwiększenie ilości włókien kolagenowych w tkance, poprzez wykonanie nićmi„rusztowania” wewnątrz tkanki.</p>
+                                    </figcaption>
+                                </figure>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        
+        <% include ./src/includes/contact %>
+        <% include ./src/includes/footer %>
+        <% include ./src/includes/copyrights %>
+        
+    </div>
+
+</body>
+</html>

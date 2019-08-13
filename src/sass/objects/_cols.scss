@@ -1,0 +1,51 @@
+.o-cols {
+    @extend %rel;
+
+    &--2p {
+        .o-cols {
+            &__item {
+                @extend %flex;
+                @extend %flex-wrap;
+                @extend %flex-spacebetween;
+                @extend %flex-column;
+                width: 50%;
+
+                &:nth-of-type(odd) {
+                    @media ( min-width: $desktop + 1px ) {
+                        .photo {
+                            margin-left: -98px;
+                        }
+                    }
+                }
+                
+                &:nth-of-type(even) {
+                    @media ( min-width: $desktop + 1px ) {
+                        .photo {
+                            margin-right: -98px;
+                        }
+                    }
+                }
+        
+                img {
+                    @media ( min-width: $desktop + 1px ) {
+                        max-width: none;            
+                    }
+                }
+            }
+        }
+    }
+
+    @media ( min-width: $tablet + 1px ) {
+        display: flex;
+        flex-wrap: wrap;        
+    
+        &--3 {
+            .o-cols {
+                &__item {
+                    width: calc(100% / 3);
+                    margin-bottom: 90px;
+                }
+            }
+        }
+    }    
+}

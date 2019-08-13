@@ -1,0 +1,35 @@
+.c-team {
+
+    &--full {
+        .o-btn {
+            margin-bottom: 40px;
+        }
+        
+        .o-section {
+            padding-top: 0;
+        }
+    }
+
+    .o-lead {
+        &--third {
+            @extend %flex;
+            @extend %flex-xy;
+            @extend %rel;
+            width: 370px;
+            height: 70px;
+            background-color: white;
+            margin: -70px auto 40px auto;
+            font-weight: $bold;
+        }
+    }
+
+    .o-text {
+        margin-bottom: 40px;
+        padding: 0 50px;
+        line-height: 1.6em;
+        
+        p {
+            margin-bottom: 1.4em;
+        }
+    }    
+}

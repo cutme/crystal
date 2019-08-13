@@ -1,0 +1,53 @@
+@import 'settings/colors.scss';
+@import 'settings/global.scss';
+
+@import 'tools/clear';
+@import 'tools/functions';
+@import 'tools/mixins';
+@import 'tools/glide';
+@import 'tools/glightbox';
+//@import 'tools/custom-select';
+
+
+@import 'generic/reset';
+@import 'generic/box-sizing';
+
+@import 'elements/extends';
+@import 'elements/fonts';
+@import 'elements/form';
+@import 'elements/media';
+@import 'elements/page';
+@import 'elements/typography';
+
+@import 'objects/btn';
+@import 'objects/cols';
+@import 'objects/container';
+@import 'objects/crystalead';
+@import 'objects/header';
+@import 'objects/icons';
+@import 'objects/lead';
+@import 'objects/logo';
+@import 'objects/section';
+@import 'objects/text';
+@import 'objects/wrap';
+
+@import 'components/about';
+@import 'components/blog';
+@import 'components/blogindex';
+@import 'components/contact';
+@import 'components/copyrights';
+@import 'components/footer';
+@import 'components/gallery';
+@import 'components/map';
+@import 'components/nav';
+@import 'components/numbers';
+@import 'components/pagination';
+@import 'components/product';
+@import 'components/products';
+@import 'components/references';
+@import 'components/slider';
+@import 'components/team';
+@import 'components/top';
+@import 'components/video';
+
+@import 'trumps/trumps';

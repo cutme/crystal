@@ -1,0 +1,82 @@
+.c-references {
+    text-align: center;
+    
+    .o-wrap {
+        @extend %rel;
+        
+        &:before,
+        &:after {
+            @extend %abs;
+            @extend %abs-after;
+            top: 0;
+            width: 20%;
+            height: 100%;
+            background: rgba(81,163,198,1);
+            background: -moz-linear-gradient(left, rgba(81,163,198,1) 0%, rgba(81,163,198,0) 100%);
+            background: -webkit-gradient(left top, right top, color-stop(0%, rgba(81,163,198,1)), color-stop(100%, rgba(81,163,198,0)));
+            background: -webkit-linear-gradient(left, rgba(81,163,198,1) 0%, rgba(81,163,198,0) 100%);
+            background: -o-linear-gradient(left, rgba(81,163,198,1) 0%, rgba(81,163,198,0) 100%);
+            background: -ms-linear-gradient(left, rgba(81,163,198,1) 0%, rgba(81,163,198,0) 100%);
+            background: linear-gradient(to right, rgba(81,163,198,1) 0%, rgba(81,163,198,0) 100%);
+            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#51a3c6', endColorstr='#51a3c6', GradientType=1 ); 
+        }
+        
+        &:before {
+            left: 0; 
+                       
+        }
+        
+        &:after {
+            right: 0;
+            transform: scaleX(-1);
+        }
+    }
+
+    p {
+        line-height: 1.5em;
+        font: {
+            size: rem(24);
+            weight: $medium;
+        }
+    }
+    
+    .author {
+        display: block;
+        padding: 40px 0;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        font: {
+            size: rem(12);
+            weight: $bold;
+        }
+    }
+    
+    .glide {
+        &__bullet {
+            width: 10px;
+            height: 10px;
+            background-color: white;
+            padding: 0;
+            margin: 0 2px;
+            border-radius: 50%;
+            border: 2px solid $c-primary;
+    
+            &--active {
+                border-color: transparent;
+            }
+        }
+        
+        &__bullets {
+            text-align: center;
+        }
+    }
+    
+    .o-section {
+        background-color: $c-primary;
+        color: white;
+    }
+    
+    &__item {
+        padding: 50px 160px 0 160px;
+    }
+}

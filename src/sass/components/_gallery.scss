@@ -1,0 +1,24 @@
+.c-gallery {
+    padding-top: 90px;
+
+    &__items {
+        @extend %flex;
+        @extend %flex-wrap;
+        width: calc(100% + 34px);
+        margin: 0 -17px;
+        
+        li {
+            width: 267px;
+            margin: 0 17px 30px 17px;
+            
+            a {
+                @extend %anim;
+                display: block;
+
+                &:hover {
+                    opacity: .8;
+                }
+            }
+        }
+    }
+}

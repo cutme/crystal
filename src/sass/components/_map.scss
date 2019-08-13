@@ -1,0 +1,31 @@
+@keyframes pulse {
+    0%   {
+        background: white;
+    }
+    50% {
+        background: #efefef;
+    }
+    
+    100% {
+        background: white;
+    }
+}
+
+
+.c-map {
+
+    width: 100%;
+    height: 325px;
+    
+    /*
+@extend %abs;
+    top: 0;
+    height: 100%; 
+    filter: grayscale(1);
+*/
+
+    &.is-loading {
+        animation: pulse 1s infinite;
+    }
+}
+

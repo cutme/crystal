@@ -1,0 +1,75 @@
+.c-pagination {
+    @extend %flex;
+    @extend %flex-x;
+    padding: 30px 0 40px 0;
+
+    ul {
+        @extend %flex;
+        @extend %flex-xy;
+    }
+    
+
+    a, .o-btn {
+        @extend %flex;
+        @extend %flex-xy;
+        width: 24px;
+        height: 24px;
+        background-color: $c-primary;
+        margin: 0;
+        border: 1px solid $c-primary;
+        letter-spacing: normal;
+        font-weight: $bold;
+        color: white;
+        
+        @media screen and ( min-width: $smartphone_portrait + 1px ) and ( max-width: $tablet_portrait + px ) {
+            font-size: rem(12);
+        }
+        
+        &:hover {
+            .desktop & {
+                background-color: $c-blue4;
+                border-color: $c-blue4;
+                color: white;
+            }
+        }
+    }
+        
+        
+    li {
+        margin: 0 3px;
+        
+        a {
+            @extend %anim;
+        }
+
+        &.is-active {
+            a {
+                background-color: white;
+                color: $c-primary;
+            }
+        }
+        
+        @media screen and ( max-width: $smartphone_portrait + px ) {
+            &:not(.is-active) {
+                display: none;
+            }
+        }
+    }
+    
+    .o-btn {
+        background-color: white;
+        padding: 0;
+        color: $c-primary;
+        
+        @media screen and ( min-width: 1121px ) {
+            &:first-child {
+                margin-right: 27px;
+            }
+            
+            &:last-child {
+                margin-left: 27px;
+            }
+        }
+    }
+}
+

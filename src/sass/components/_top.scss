@@ -1,0 +1,25 @@
+.c-top {
+    @include z-index(top);
+    @extend %anim;
+    position: fixed;
+    left: 0; top: 0;
+    width: 100%;
+    height: 100px;
+    background-color: white;
+
+    .o-logo {
+        @extend %anim;
+        width: 238px; height: 27px;
+    }
+    
+    .o-wrap {
+        @extend %flex;
+        @extend %flex-y;
+        @extend %flex-spacebetween;
+        height: 100%;
+    }
+    
+    &.is-out {
+        transform: translate3d(0, -100%, 0);
+    }
+}

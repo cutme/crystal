@@ -1,0 +1,27 @@
+.o-crystalead {
+    @extend %rel; z-index: 10;
+    display: inline-block;
+    background: {
+        image: url(../img/logo-crystal--sign.svg);
+        repeat: no-repeat;
+        position: center top;
+        size: 52px 31px;
+        color: white;
+    }
+    margin-bottom: 5px;
+    padding: 45px 50px 10px 50px;
+    line-height: 1em;
+    text: {
+        align: center;
+        transform: uppercase;
+    }
+    font-size: rem(20);
+    color: $c-blue1;
+    
+    
+    
+    &--in {
+        bottom: -35px;
+        padding-bottom: 30px;
+    }
+}

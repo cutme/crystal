@@ -1,0 +1,22 @@
+.c-blogindex {
+
+    .o-cols {
+        &__item {
+            margin-bottom: 70px;
+        }
+    }
+
+    .o-section {
+        padding-top: 0;
+    }
+    
+    &__intro {
+        margin-bottom: 100px;
+
+        .o-text {
+            p {
+                margin: 0;
+            }
+        }
+    }
+}

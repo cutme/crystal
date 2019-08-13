@@ -1,0 +1,28 @@
+.c-product {
+    .o-section {
+        padding-top: 0;
+    }
+    
+    table {
+        width: 800px;
+        margin: 0 auto 50px auto;
+        
+    }
+    
+    &__intro {
+        margin-bottom: 100px;
+
+        .o-text {
+            p {
+                margin: 0;
+            }
+        }
+    }
+    
+    &__main {
+    
+        .o-text {
+            
+        }
+    }
+}
