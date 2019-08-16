@@ -5,7 +5,7 @@
     WebFont.load({
 
         google: {
-            families: ['Montserrat:400,700,800:latin-ext']
+            families: ['Montserrat:400,500,700,800:latin-ext']
         }
     });
 })();

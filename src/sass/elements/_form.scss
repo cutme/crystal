@@ -151,42 +151,40 @@ input {
 }
 */
 
-.form-label {
+.form-group {
+    @extend %rel; z-index: 1;
     @extend %flex;
-    @extend %flex-spacebetween;
-    width: 100%;
-    font-size: rem(10);
-    
-    @media ( min-width: $tablet_portrait + 1px ) {
-        white-space: nowrap;
-    }
+    @extend %flex-wrap;
+    padding: 0 15px;
+    margin-bottom: 25px;
+    flex: 1; 
 }
 
 .form-row {
+    @extend %flex;
+    @extend %flex-wrap;
     @extend %rel;
     width: calc(100% + 30px);
     margin: 0 -15px 0 -15px;
     
-    @media screen and ( min-width: $smartphone + px ) {
-        display: flex;
-        flex-wrap: wrap;
-    }
-}
-
-.form-group {
-    @extend %rel; z-index: 1;
-    padding: 0 15px;
-    margin-bottom: 25px;
-    
-    @media screen and ( min-width: $smartphone + px ) {
-        display: flex;
-        flex-wrap: wrap;
-        flex: 1; 
+    &:not(.form-row--submit) {
+        display: block;
+        
+        .form-group {
+            display: block;
+        }
     }
     
-    &--checkbox {
-        span {
-            padding-left: 20px;
+    &--submit {
+        @media ( max-width: $smartphone + px ) {
+            display: block;
+        }
+        
+        .form-group {
+            @media ( max-width: $smartphone + px ) {
+                display: block;
+            }
         }
     }
 }
+

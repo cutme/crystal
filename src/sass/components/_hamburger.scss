@@ -1,0 +1,88 @@
+.c-hamburger {
+    @include z-index(hamburger);
+    @extend %anim;
+    @extend %rel;
+    width: 40px; height: 26px;
+    border-top: 6px solid $c-black1;
+    margin-top: -5px;
+    cursor: pointer;
+    display: none;
+
+    @media screen and ( max-width: $tablet + px ) {
+        display: block;
+        width: 30px; height: 16px;
+        border-top: 4px solid $c-black1;
+    }
+
+    &:after, &:before {
+        @extend %abs;
+        @extend %abs-after;
+        @extend %anim;
+        width: 100%; 
+        height: 6px;
+        background-color: $c-black1;
+        
+        @media screen and ( max-width: $tablet + px ) {
+            height: 4px;
+        }
+    }
+    
+    &:after {
+        transform-origin: right;
+        top: 100%;
+    }
+    
+    &:before {
+        transform-origin: left;
+        top: calc(50% - 3px);
+        
+        @media screen and ( max-width: $tablet + px ) {
+            top: calc(50% - 2px);
+        }
+    }
+    
+    &.is-active {
+        border-color: transparent !important;
+        
+        &:after, &:before {
+            @media screen and ( max-width: $tablet + px ) {
+                background-color: white;
+            }
+        }
+
+        &:after {
+            transform: rotate(45deg) translate(-2px, 2px);
+            
+            @media screen and ( min-width: $tablet + 1px ) {
+                transform: rotate(45deg) translate(-7px, 2px);
+            }
+            
+            @media screen and ( max-width: $tablet + px ) {
+                transform: rotate(45deg) translate(-2px,3px);
+            }
+        }
+        
+        &:before {
+            transform: rotate(-45deg) translate(-4px, 10px);         
+            
+            @media screen and ( max-width: $tablet + px ) {
+                top: 0;
+                transform: rotate(-45deg) translate(-5px,13px);
+            }
+        }
+    }
+
+    @media screen and ( max-width: $tablet + px ) {
+        width: 30px; height: 16px;
+        border-top: 4px solid $c-black1;
+        
+        &:after, &:before {
+            height: 4px;
+        }
+        
+        &:before {
+            top: calc(50% - 2px);
+        }
+    }
+}
+

@@ -1,6 +1,12 @@
 .c-references {
     text-align: center;
     
+    .o-section {
+        @media ( max-width: $tablet + px ) {
+           // padding-top: 0;
+        }
+    }
+    
     .o-wrap {
         @extend %rel;
         
@@ -19,6 +25,10 @@
             background: -ms-linear-gradient(left, rgba(81,163,198,1) 0%, rgba(81,163,198,0) 100%);
             background: linear-gradient(to right, rgba(81,163,198,1) 0%, rgba(81,163,198,0) 100%);
             filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#51a3c6', endColorstr='#51a3c6', GradientType=1 ); 
+            
+            @media ( max-width: $smartphone_portrait + px ) {
+                display: none;
+            }
         }
         
         &:before {
@@ -37,6 +47,10 @@
         font: {
             size: rem(24);
             weight: $medium;
+        }
+        
+        @media ( max-width: $tablet + px ) {
+            font-size: rem(18);
         }
     }
     
@@ -69,14 +83,22 @@
         &__bullets {
             text-align: center;
         }
+        
+        &__slide {
+            padding: 50px 160px 0 160px;
+            
+            @media ( max-width: $tablet + px ) {
+                padding: 50px 80px 0 80px;
+            }
+            
+            @media ( max-width: $tablet + px ) {
+                padding: 50px 0 0 0;
+            }
+        }
     }
     
     .o-section {
         background-color: $c-primary;
         color: white;
-    }
-    
-    &__item {
-        padding: 50px 160px 0 160px;
     }
 }

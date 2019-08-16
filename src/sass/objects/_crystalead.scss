@@ -18,10 +18,22 @@
     font-size: rem(20);
     color: $c-blue1;
     
-    
+    @media ( max-width: $smartphone_portrait + px ) {
+        width: 100%;
+        padding: 40px 0 20px 0;
+    }
     
     &--in {
-        bottom: -35px;
-        padding-bottom: 30px;
+        @media ( min-width: $smartphone_portrait + 1px ) {
+            bottom: -35px;
+            padding-bottom: 30px;
+        }
+    }
+    
+    & + p {
+    
+        @media ( min-width: $smartphone_portrait + 1px ) {
+            margin-top: 20px;
+        }
     }
 }

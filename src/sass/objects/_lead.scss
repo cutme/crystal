@@ -10,10 +10,22 @@
     
     &--first {
         font-size: rem(43.8);
+        
+        @media ( max-width: $tablet_portrait + px ) {
+            font-size: rem(32);
+        }
+        
+        @media ( max-width: $smartphone_portrait + px ) {
+            font-size: rem(24);
+        }
     }
 
     &--second {
         font-size: rem(30);
+        
+        @media ( max-width: $smartphone + px ) {
+            font-size: rem(24);
+        }
     }
 
     &--third {
@@ -26,6 +38,10 @@
     
     &--fifth {
         font-size: rem(14);
+        
+        @media ( max-width: $smartphone_portrait + px ) {
+            font-size: rem(12);
+        }
     }
     
     

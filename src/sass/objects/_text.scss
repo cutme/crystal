@@ -23,6 +23,16 @@
             padding: 15px;
             text-align: center;
             border-bottom: 1px solid $c-blue3;
+            
+            @media ( max-width: $tablet_portrait + px ) {
+                padding: 10px 5px;
+                font-size: rem(14);
+            }
+            
+            @media ( max-width: $smartphone_portrait + px ) {
+                padding: 5px;
+                font-size: rem(10);
+            }
         }
     
         thead {
@@ -33,14 +43,72 @@
                 color: white;
             }
         }
+        
+/*
+        @media ( max-width: $smartphone_portrait + px ) {
+            display: block;
+        }  
+        
+        thead, tbody, td, tr {
+            @media ( max-width: $smartphone_portrait + px ) {
+                display: block;
+            }
+        }
+        
+        thead tr { 
+            @media ( max-width: $smartphone_portrait + px ) {
+        		position: absolute;
+        		top: -9999px;
+        		left: -9999px;
+            }
+    	}
+    	
+    	tbody {
+    	    tr {
+                td {                     
+                    @media ( max-width: $smartphone_portrait + px ) {
+                        position: relative;
+                		border-bottom: 1px solid $c-black2; 
+                		padding-top: 24px; 
+                		text-align: left !important;
+                    }
+                    
+                    &:before {
+                        @media ( max-width: $smartphone_portrait + px ) {
+                    		position: absolute;
+                    		top: 6px;
+                    		left: 20px;
+                    		width: 100%; 
+                    		padding-right: 10px; 
+                    		white-space: nowrap;
+                    		font-weight: $book;
+                    		color: white;
+                    		opacity: .5;
+                    		content: attr(data-th);
+                        }                		
+                		
+                        @media ( max-width: $smartphone_portrait + px ) {
+                		    left: 10px;
+                		}
+                    }
+                            
+                }
+            }
+        }
+*/
     }
     
     ul {
         float: left;
+        margin-bottom: 30px;
 
         li {
             @extend %rel;
             padding-left: 40px;
+            
+            @media ( max-width: $tablet_portrait + px ) {
+                padding-left: 30px;
+            }
             
             &:before {
                 @extend %abs;
@@ -64,23 +132,11 @@
     .align-left {
         float: left;
         margin-right: 30px;
-        
-        /*
-&:not(:last-of-type) {
-            margin-bottom: 80px;
-        }
-*/
     }
 
     .align-right {
         float: right;
         margin-left: 30px;
-        
-        /*
-&:not(:last-of-type) {
-            margin-bottom: 80px;
-        }
-*/
     }
     
     section {
@@ -90,6 +146,17 @@
             .align-left,
             .align-right {
                 margin-bottom: 80px;
+                
+                @media ( max-width: $tablet_portrait + px ) {
+                    margin-bottom: 40px;
+                }
+            }
+        }
+        
+        .align-left,
+        .align-right {
+            @media ( max-width: $tablet_portrait + px ) {
+                margin-bottom: 40px;
             }
         }
     }

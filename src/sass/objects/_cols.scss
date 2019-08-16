@@ -1,6 +1,11 @@
 .o-cols {
     @extend %rel;
 
+    @media ( min-width: $tablet_portrait + 1px ) {
+        display: flex;
+        flex-wrap: wrap; 
+    }
+
     &--2p {
         .o-cols {
             &__item {
@@ -8,7 +13,19 @@
                 @extend %flex-wrap;
                 @extend %flex-spacebetween;
                 @extend %flex-column;
-                width: 50%;
+                
+                @media ( min-width: $tablet_portrait + 1px ) {
+                    width: 50%;
+                }
+                
+                @media ( max-width: $tablet_portrait + px ) {
+                    max-width: 683px;
+                    margin: 0 auto;
+                }
+                
+                &:not(:last-of-type) {
+                    margin-bottom: 60px;
+                }
 
                 &:nth-of-type(odd) {
                     @media ( min-width: $desktop + 1px ) {
@@ -34,18 +51,24 @@
             }
         }
     }
-
-    @media ( min-width: $tablet + 1px ) {
-        display: flex;
-        flex-wrap: wrap;        
     
-        &--3 {
-            .o-cols {
-                &__item {
+    &--3 {
+        .o-cols {
+            &__item {
+                &:not(:last-of-type) {
+                    @media ( max-width: $tablet_portrait + px ) {
+                        margin-bottom: 40px;
+                    }
+                }
+            
+                @media ( min-width: $tablet_portrait + 1px ) {
                     width: calc(100% / 3);
-                    margin-bottom: 90px;
+                    
+                    &:not(:last-of-type) {
+                        //margin-bottom: 90px;
+                    }
                 }
             }
         }
-    }    
+    }
 }

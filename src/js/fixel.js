@@ -1,1 +1,0 @@
-import stickybits from 'stickybits';document.addEventListener('DOMContentLoaded',function() {    const init = function() {        const stickybit = stickybits('.js-sticky',            {stickyBitStickyOffset: 140}        )    };    document.getElementsByClassName('js-sticky')[0] ? init() : false;}, false);

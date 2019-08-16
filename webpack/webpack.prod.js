@@ -17,6 +17,7 @@ console.log(process.env.NODE_ENV);
 const templateFileMapper = [
 
     { template: "./src/blog.ejs", file: "blog.html" },
+    { template: "./src/blog-single.ejs", file: "blog-single.html" },
     { template: "./src/index.ejs", file: "index.html" },
     { template: "./src/kadra.ejs", file: "kadra.html" },
     { template: "./src/kontakt.ejs", file: "kontakt.html" },

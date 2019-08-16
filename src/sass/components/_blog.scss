@@ -5,7 +5,10 @@
     }
 
     figcaption {
-        padding: 0 40px;
+        @media ( min-width: $smartphone_portrait + px ) {
+            padding: 0 40px;        
+        }
+
     }
     
     .o-lead {
@@ -23,8 +26,11 @@
     
     .o-text {
         margin-bottom: 40px;
-        padding: 0 20px;
         line-height: 1.6em;
+        
+        @media ( min-width: $smartphone + 1px ) {
+            padding: 0 20px;
+        }
         
         p {
             margin-bottom: 1.4em;

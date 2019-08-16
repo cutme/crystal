@@ -2,15 +2,41 @@
     
     .o-cols {
         &__item {
-            width: 50%;
-            padding: 0 40px;
+            @media ( min-width: $tablet + 1px ) {
+                padding: 0 40px;
+            }
+                    
+            @media ( min-width: $tablet_portrait + 1px ) {
+                width: 50%;            
+            }
+            
+            &:first-of-type {
+                @media ( max-width: $tablet_portrait + px ) {
+                    max-width: 320px;
+                    margin: 0 auto 60px auto;
+                }
+            }
+        }
+    }
+    
+    .o-header {
+        &--main {
+            margin-bottom: 70px;
+            
+            @media ( max-width: $tablet_portrait + 1px ) {
+                margin-bottom: 40px;
+            }
         }
     }
     
     .o-lead {
         &--second {
-            margin-bottom: 2em;
+            margin-bottom: 1em;
             color: $c-blue1;
+            
+            @media ( min-width: $smartphone_portrait +1px ) {
+                margin-bottom: 2em;
+            }
         }
     }
     
@@ -21,15 +47,35 @@
             padding-left: 40px;
             line-height: 1.2em;
             font-size: rem(20);
+            
+            @media ( max-width: $tablet + px ) {
+                font-size: rem(16);
+            }
+            
+            @media ( max-width: $smartphone_portrait + px ) {
+                padding-left: 20px;
+            }
         }
         
         .logo {
-            padding-top: 10px;
+            padding-top: 10px;   
+            
+            @media ( max-width: $smartphone_portrait + px ) {
+                width: 80px;
+            }         
+        }
+        
+        p {
+            white-space: nowrap;
         }
     }
     
     &__details {
         margin-bottom: 70px;
+        
+        @media ( max-width: $smartphone_portrait + px ) {
+            margin-bottom: 30px;
+        }
 
         li {
             @extend %flex;
@@ -40,17 +86,29 @@
         i {
             margin-right: 30px;
             
-            &.icon-phone {
-                font-size: rem(30);
+            @media ( max-width: $smartphone_portrait + px ) {
+                margin-right: 15px;
             }
             
-            &.icon-mail {
+            &.icon-phone {
+                font-size: rem(30);
                 
+                @media ( max-width: $smartphone_portrait + px ) {
+                    font-size: rem(24);
+                }
             }
         }
-        
+
         span {
             font-size: rem(25);
+            
+            @media ( max-width: $tablet + px ) {
+                font-size: rem(20);
+            }
+            
+            @media ( max-width: $smartphone_portrait + px ) {
+                font-size: rem(16);
+            }
         }
         
         a {
@@ -63,7 +121,7 @@
     }
     
     &__form {
-        width: 690px;
+        max-width: 690px;
         margin: 0 auto;
         
         .o-btn {

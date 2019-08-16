@@ -1,16 +1,28 @@
 .c-product {
-    .o-section {
-        padding-top: 0;
-    }
-    
+
     table {
         width: 800px;
-        margin: 0 auto 50px auto;
+        margin: 50px auto 50px auto;
         
+        @media ( max-width: 860px ) {
+            width: 100%;
+        }
+        
+        @media ( max-width: $smartphone + px ) {
+            margin-top: 25px;
+        }
     }
     
     &__intro {
         margin-bottom: 100px;
+        
+        @media ( max-width: $tablet + px ) {
+            margin-bottom: 50px;
+        }
+        
+        @media ( max-width: $smartphone + px ) {
+            margin-bottom: 25px;
+        }
 
         .o-text {
             p {
@@ -19,10 +31,21 @@
         }
     }
     
-    &__main {
+    .photo {
+        
+        @media ( min-width: $tablet_portrait + 1px ) {
+            float: left;
+            max-width: grid(700);
+        }
+        
+        @media ( max-width: $tablet_portrait + px ) {
+            margin: 0 auto;
+        }
+    }
     
-        .o-text {
-            
+    .o-section {
+        @media ( max-width: $smartphone_portrait + px ) {
+            padding-bottom: 20px;
         }
     }
 }

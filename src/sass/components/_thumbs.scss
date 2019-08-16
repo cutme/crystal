@@ -1,0 +1,60 @@
+.c-thumbs {
+
+    @media ( max-width: $tablet_portrait + px ) {
+        //display: flex;
+        //flex-wrap: wrap;
+    }
+
+    &__item {
+        display: block;
+        margin-bottom: 32px;
+
+        @media ( max-width: $tablet_portrait + px ) {
+           // width: 50%;
+        }
+
+        figure {
+            @extend %flex;
+        }
+        
+        img {
+            @extend %anim;
+            margin-right: 20px;
+            
+            @media ( max-width: $smartphone_portrait + px ) {
+                margin-right: 15px;
+            }
+        }
+        
+        .o-lead {
+            &--fourth {
+                @extend %anim;
+                font-weight: $medium;
+                color: $c-blue3;
+                
+                    @media ( max-width: $smartphone_portrait + px ) {
+                        font-size: rem(14);
+                    }
+                }
+            }
+            
+            &--fifth {
+                color: $c-gray2;
+            }
+        }
+        
+        &:hover {
+            img {
+                
+                opacity: .8;
+            }
+            
+            .o-lead {
+                &--fourth {
+                    color: $c-blue1;
+                    
+                    
+            }
+        }
+    }
+}

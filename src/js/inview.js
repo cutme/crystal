@@ -11,19 +11,17 @@ document.addEventListener('DOMContentLoaded',function() {
 
             if (cutme.Helpers.isInView(anims[i])) {
                 anims[i].classList.add('anim--visible');
-                
             }
 
-            const inview = InView(anims[i], function(isInView) {
+            const inview = InView(anims[i], function(isInView, data) {
                 if (isInView) {
-
-                    anims[i].classList.add('anim--visible');
-                    this.destroy();
-    
+                    if (data.elementOffsetTopInViewHeight < data.inViewHeight/2) {
+                        anims[i].classList.add('anim--visible');
+                        this.destroy();
+                    }
                 }
             });
         }
     };
 
 }, false);
-

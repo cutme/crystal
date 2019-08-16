@@ -21,8 +21,7 @@ document.addEventListener('DOMContentLoaded', function() {
         };
     
         const nav = document.getElementsByClassName('js-nav')[0],
-              li = nav.getElementsByTagName('li'),
-              submenus = nav.getElementsByClassName('js-submenu');
+              li = nav.getElementsByTagName('li');
         
         const hideMenu = function() {
             
@@ -49,26 +48,19 @@ document.addEventListener('DOMContentLoaded', function() {
             e.preventDefault() ? e.preventDefault() : e.preventDefault = false;
         }
 
-        const submenu = function(e) {
+        el.addEventListener('click', showMenu);
+     
+        const menu = function(e) {
 
-            if (ww <= 1024) {
+            if (ww <= 768) {
                 let item = e.currentTarget,
-                    submenu = item.getElementsByClassName('js-submenu');
+                    link = item.getElementsByClassName('js-goto');
 
                 e.stopPropagation();
 
-                if (submenu.length > 0) {
+                if (link.length > 0) {
 
-                    if (submenu[0].classList.contains('is-active')) {
-                        submenu[0].classList.remove('is-active');
-                    } else {
-                    
-                        for (let k = 0; k < submenus.length; k ++) {
-                            submenus[k].classList.remove('is-active');
-                        }
-
-                        submenu[0].classList.add('is-active');
-                    }
+                    hideMenu();
 
                 } else {
                     let url = item.getElementsByTagName('a')[0].getAttribute('href');
@@ -78,14 +70,11 @@ document.addEventListener('DOMContentLoaded', function() {
                 e.preventDefault() ? e.preventDefault() : e.preventDefault = false;
             }
         }
-
+     
         for (let j = 0; j < li.length; j++) {
-            li[j].addEventListener('click', submenu);
+            li[j].addEventListener('click', menu);
         }
 
-        el.addEventListener('click', showMenu);
-     
-     
         // Hide menu on ESC
         
         document.addEventListener('keydown', function(evt) {

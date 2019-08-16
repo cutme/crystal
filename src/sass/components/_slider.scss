@@ -1,6 +1,11 @@
 .c-slider {
     @extend %rel; 
     height: 568px;
+    overflow: hidden;
+    
+    @media ( max-width: $tablet_portrait + px ) {
+        height: 400px;
+    }
     
     .glide {
         &__arrow {
@@ -34,6 +39,8 @@
             @extend %abs-y;
             @extend %flex;
             @extend %flex-spacebetween;
+            left: calc((100% - 1170px)/2);
+            width: $base + px;
         }
         
         &__bullet {
@@ -53,12 +60,21 @@
         &__arrows,
         &__bullets {
             @extend %abs;
-            left: calc((100% - 1170px)/2);
-            width: $base + px;
+            
         }
         
         &__bullets {
+            left: 30px;
             bottom: 25px;
+            
+            @media ( min-width: $base + 80px ) {
+                left: calc((100% - 1170px)/2);
+                width: $base + px;
+            }
+            
+            @media screen and ( max-width: $smartphone + px ) {
+                left: 20px;
+        	}
         }
     }
 
@@ -79,35 +95,45 @@
     &__text {
         @extend %abs;
         @extend %abs-y;
+        max-width: 520px;
         padding-bottom: 80px;
-        
-        @media ( max-width: $tablet + px ) {
-            left: 0;
-            width: 100%;
-            padding: 0 25px;
-            text-align: center;
-        }
         
        .firstline,
        .secondline {
             opacity: 0;
             transform: translate3d(-50px, 0, 0);
        }
-    
-    
+
        .firstline {
             margin-bottom: 20px;
+            line-height: 1.2em;
             font: {
                 size: rem(38);
                 weight: $medium;
             }
             color: $c-black4;
+
+            @media ( max-width: $tablet + px ) {
+                font-size: tablet(38);
+            }
+
+            @media ( max-width: $smartphone_portrait + px ) {
+                font-size: rem(24);
+            }
         }
 
         .secondline {
             font-size: rem(18);
+            
+            @media ( max-width: $tablet + px ) {
+                font-size: tablet(18);
+            }
+            
+            @media ( max-width: $smartphone_portrait + px ) {
+                font-size: rem(16);
+            }
         }
-        
+
         .cta {
             opacity: 0;
             transform: translate3d(-50px, 0, 0);

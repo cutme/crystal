@@ -1,14 +1,26 @@
 .c-numbers {
     background-color: $c-primary;
-    padding: 10px 0 20px 0;
     text-align: center;
     color: white;
+    
+    @media ( min-width: $smartphone_portrait + 1px ) {
+        padding: 10px 0 20px 0;
+    }
 
     &__items {
         @extend %flex;
+        
+        @media ( max-width: $smartphone_portrait + px ) {
+            flex-wrap: wrap;
+        }
 
         li {
             width: 25%;
+            
+            @media ( max-width: $smartphone_portrait + px ) {
+                width: 50%;
+                margin-bottom: 20px;
+            }
         }
         
         [class^="icon-"] {

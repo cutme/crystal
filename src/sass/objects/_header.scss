@@ -1,15 +1,19 @@
 .o-header {
-    margin-bottom: 55px;
+    margin-bottom: 50px;
 
     p {
         color: $c-gray1;
     }
     
     &--main {
-        margin-bottom: 40px;
-        padding-top: 60px;
+        max-width: 800px;
+        margin: 0 auto 40px auto;
         text-align: center;
         letter-spacing: 1px;
+        
+        @media ( min-width: $tablet_portrait + 1px ) {
+            padding-top: 10px;
+        }
 
         p {
             color: black;
@@ -17,7 +21,7 @@
         
         .o-lead {
             &--first {
-                margin-bottom: 1em;
+                margin-bottom: .7em;
                 text-transform: uppercase;
                 font-weight: $medium;
                 color: $c-blue3;

@@ -1,0 +1,41 @@
+.c-post {
+    .o-lead {
+        &--second {
+            text-transform: uppercase;
+            font-weight: $medium;
+            color: $c-blue3;
+        }
+    }
+    
+    .o-text {
+        margin-bottom: 50px;
+    }
+    
+    &__footer {
+    
+        .date {
+            border-top: 2px solid $c-gray2;
+            margin-right: 20px;
+            padding: 5px 20px 0 0;
+            
+        }
+
+        .meta {
+            display: inline-block;
+            font-weight: $bold;
+            color: $c-gray2;
+        }        
+    }
+    
+    &__image {
+        margin-bottom: 50px;
+        
+        @media ( max-width: $smartphone_portrait + px ) {
+            margin-bottom: 25px;
+        }
+        
+        img {
+            width: 100%;
+        }
+    }
+}

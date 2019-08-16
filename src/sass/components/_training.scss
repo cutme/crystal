@@ -1,0 +1,11 @@
+.c-training {
+    .o-header {
+        &--main {
+            margin-bottom: 50px;
+            
+            @media ( min-width: $tablet_portrait + 1px ) {
+                margin-bottom: 90px;
+            }
+        }
+    }
+}
