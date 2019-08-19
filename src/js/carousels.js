@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded',function() {
 
         const glide = new Glide(home, {
             type: 'carousel',
-            animationDuration: 1200,
+            animationDuration: 1000,
             autoplay: 4500,
             hoverpause: true,
             gap: 0
