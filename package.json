@@ -4,7 +4,7 @@
         "@babel/preset-env": "^7.2.0",
         "babel-loader": "^8.0.4",
         "body-scroll-lock": "^2.6.1",
-        "browserslist": "^4.1.0",
+        "browserslist": "^4.16.5",
         "css-loader": "^1.0.0",
         "cssnano": "^4.1.0",
         "custom-select": "^1.1.15",
